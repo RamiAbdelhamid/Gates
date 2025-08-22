@@ -3,6 +3,7 @@ import { Phone, MessageCircle, MapPin, Mail, Clock, Shield, Users, Award, Star }
 import motorVds from "./assets/motor vds.jpg";
   import kit from "./assets/kit.jpg";
   import smart from "./assets/smart.jpg";
+  import logo from "./assets/logo.jpg";
 // Lazy load components for better performance
 const AboutUs = lazy(() => Promise.resolve({ 
   default: () => (
@@ -222,15 +223,20 @@ const App = () => {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-lg shadow-lg z-50 transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div 
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
-            onClick={() => {
-              setActiveSection('home');
-              setIsMobileMenuOpen(false);
-            }}
-          >
-            Security Gate Electronics
-          </div>
+        <button
+  aria-label="Go to home"
+  onClick={() => { setActiveSection('home'); setIsMobileMenuOpen(false); }}
+  className="flex items-center gap-3 group cursor-pointer"
+>
+  <img
+    src={logo}
+    alt="Security Gate Electronics"
+    className="h-9 w-auto object-contain drop-shadow-sm"
+  />
+  <span className="hidden sm:inline text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:opacity-90">
+    Security Gate Electronics
+  </span>
+</button>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">

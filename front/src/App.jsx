@@ -1,6 +1,8 @@
 import React, { useState, lazy, Suspense } from 'react';
-import { Phone, MessageCircle, MapPin, Mail, Clock, Shield, Zap, Settings, Users, Award, Star } from 'lucide-react';
-
+import { Phone, MessageCircle, MapPin, Mail, Clock, Shield, Users, Award, Star } from 'lucide-react';
+import motorVds from "./assets/motor vds.jpg";
+  import kit from "./assets/kit.jpg";
+  import smart from "./assets/smart.jpg";
 // Lazy load components for better performance
 const AboutUs = lazy(() => Promise.resolve({ 
   default: () => (
@@ -85,28 +87,28 @@ const ContactUs = lazy(() => Promise.resolve({
                     <Phone className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-gray-600">+962 6 123 4567</p>
+                      <p className="text-gray-600">+962 77 995 4433</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MessageCircle className="w-6 h-6 text-green-600" />
                     <div>
                       <p className="font-semibold">WhatsApp</p>
-                      <p className="text-gray-600">+962 79 123 4567</p>
+                      <p className="text-gray-600">+962 77 995 4433</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-red-600" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-gray-600">info@securitygate.jo</p>
+                      <p className="text-gray-600">sales0gate@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-purple-600" />
                     <div>
                       <p className="font-semibold">Address</p>
-                      <p className="text-gray-600">Al-Abdali District, Amman, Jordan</p>
+                      <p className="text-gray-600">Khalda, Amman, Jordan</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -122,7 +124,7 @@ const ContactUs = lazy(() => Promise.resolve({
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Emergency Support</h3>
                 <p className="mb-4">Need immediate assistance? Our emergency hotline is available 24/7</p>
-                <p className="text-xl font-bold">🚨 +962 77 999 8888</p>
+                <p className="text-xl font-bold">🚨 +962 77 995 4433</p>
               </div>
             </div>
             
@@ -131,12 +133,8 @@ const ContactUs = lazy(() => Promise.resolve({
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h4 className="text-xl font-bold mb-2">Our Location</h4>
-                  <p className="text-gray-600">Al-Abdali District</p>
+                  <p className="text-gray-600">Khalda</p>
                   <p className="text-gray-600">Amman, Jordan</p>
-                  <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-gray-600">Interactive map would be embedded here</p>
-                    <p className="text-sm text-gray-600">showing our exact location</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -160,52 +158,64 @@ const App = () => {
   const products = [
     {
       id: 1,
-      name: "Smart Security Camera System",
-      image: "🎥",
-      price: "Starting from $299",
-      description: "4K Ultra HD cameras with night vision, motion detection, and smartphone app integration. Perfect for home and business surveillance.",
-      features: ["4K Resolution", "Night Vision", "Motion Detection", "Mobile App", "Cloud Storage"]
+      name: "Motorized VDS (400 KG, 600 KG, 800 KG, 1000 KG ,1600 KG)",
+      src: motorVds,
+      price: "Starting from 290 JOD",
+      description: "High-performance motorized VDS system designed for heavy-duty gates with smooth, quiet, and durable operation.",
+      features: [
+        "Structure in die-cast aluminum, powder painted",
+        "Steel and cast gears obtained from solid",
+        "Lithium grease lubrication against corrosion, oxidation and rust",
+        "Very quiet operation",
+        "High-performance electric motor",
+        "Release device with customized key",
+        "Available with and without encoder",
+        "Electronic torque control",
+        "Pre-wired and easy programming software",
+        "Available with and without control unit",
+        "Control unit box with air-stop seal (moisture & insect protection)",
+        "Anti-squashing system and slowing down function (EN 12453)",
+        "Optional kit battery backup",
+        "Power supply: 230Vac – 24Vcc"
+      ]
     },
+    
     {
       id: 2,
-      name: "Biometric Access Control",
-      image: "🔐",
+      name: "VDS Swing Gate Actuator Kit (400 KG , 500 KG)",
+      src: kit,
       price: "Starting from $799",
-      description: "Advanced fingerprint and facial recognition system for secure access control. Ideal for offices and restricted areas.",
-      features: ["Fingerprint Scanner", "Face Recognition", "RFID Support", "Real-time Monitoring", "Multi-user Management"]
+      description:
+        "Heavy-duty swing gate kit with quiet operation, stainless rod, anti-squash safety (EN 12453), and fast installation brackets.",
+      features: [
+        "Leaf length: 2.5 m up to 3 m",
+        "Sturdy aluminum structure",
+        "Rod stroke: 400 mm",
+        "Stainless steel rod",
+        "Optional limit switches",
+        "Very quiet operation",
+        "High-performance electric motor",
+        "Thermal cut-out: 140°",
+        "Manual release with key",
+        "Lithium grease lubrication (anti-corrosion/oxidation/rust)",
+        "Opening angle: 120°",
+        "Quick install: multi-position brackets + technopolymer covers",
+        "Anti-squashing system (EN 12453)",
+        "Slowing-down function (EN 12453)",
+        "Power supply: 230 Vac – 24 Vdc",
+        "Optional battery backup kit"
+      ]
     },
+    
     {
       id: 3,
-      name: "Smart Alarm System",
-      image: "🚨",
+      name: "Smart parking",
+     src: smart,
       price: "Starting from $199",
-      description: "Wireless alarm system with sensors, sirens, and mobile notifications. Complete home security solution.",
-      features: ["Wireless Sensors", "Mobile Alerts", "24/7 Monitoring", "Battery Backup", "Easy Installation"]
+      description: " Smart parking system with sensors, sirens, and mobile notifications. Complete home security solution.",
+      features: ["Smart parking system with sensors, sirens, and mobile notifications."]
     },
-    {
-      id: 4,
-      name: "Gate Automation System",
-      image: "🚪",
-      price: "Starting from $599",
-      description: "Automated gate opening system with remote control, safety sensors, and manual override features.",
-      features: ["Remote Control", "Safety Sensors", "Manual Override", "Weather Resistant", "Professional Installation"]
-    },
-    {
-      id: 5,
-      name: "Intercom System",
-      image: "📞",
-      price: "Starting from $149",
-      description: "Video intercom system for buildings and homes. See and communicate with visitors before granting access.",
-      features: ["Video Display", "Two-way Audio", "Door Release", "Night Vision", "Recording Capability"]
-    },
-    {
-      id: 6,
-      name: "Fire Detection System",
-      image: "🔥",
-      price: "Starting from $399",
-      description: "Advanced fire detection and alarm system with smoke, heat, and carbon monoxide sensors.",
-      features: ["Smoke Detection", "Heat Sensors", "CO Monitoring", "Emergency Alerts", "Professional Monitoring"]
-    }
+  
   ];
 
   const NavBar = () => (
@@ -297,14 +307,14 @@ const App = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
           <a 
-            href="tel:+96261234567" 
+            href="tel:962779954433" 
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             <Phone className="inline w-5 h-5 mr-2" />
             Call Now
           </a>
           <a 
-            href="https://wa.me/962791234567" 
+            href="https://wa.me/962779954433" 
             className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
           >
             <MessageCircle className="inline w-5 h-5 mr-2" />
@@ -318,12 +328,21 @@ const App = () => {
   const ProductCard = ({ product }) => (
     <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden group">
       <div className="relative">
-        <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-500">
-          {product.image}
-        </div>
-        <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-          Popular
-        </div>
+     
+
+
+      {product.src ? (
+    <img
+      src={product.src}
+      alt={product.name}
+      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+    />
+  ) : (
+    <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-500">
+      {product.image}
+    </div>
+  )}
+    
       </div>
       
       <div className="p-6">
@@ -345,14 +364,14 @@ const App = () => {
         
         <div className="flex flex-col sm:flex-row gap-3">
           <a 
-            href="tel:+96261234567"
+            href="tel:962779954433"
             className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             <Phone className="inline w-4 h-4 mr-2" />
             Call to Order
           </a>
           <a 
-            href="https://wa.me/962791234567"
+            href="https://wa.me/962779954433"
             className="flex-1 bg-green-500 text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
           >
             <MessageCircle className="inline w-4 h-4 mr-2" />
@@ -392,17 +411,15 @@ const App = () => {
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Security Gate Electronics
             </h3>
-            <p className="text-gray-300 mb-4">
-              Your trusted partner in security solutions for over 15 years.
-            </p>
+         
             <div className="flex space-x-4">
-              <a href="tel:+96261234567" className="text-blue-400 hover:text-blue-300">
+              <a href="tel:+962779954433" className="text-blue-400 hover:text-blue-300">
                 <Phone className="w-5 h-5" />
               </a>
-              <a href="https://wa.me/962791234567" className="text-green-400 hover:text-green-300">
+              <a href="https://wa.me/962779954433" className="text-green-400 hover:text-green-300">
                 <MessageCircle className="w-5 h-5" />
               </a>
-              <a href="mailto:info@securitygate.jo" className="text-red-400 hover:text-red-300">
+              <a href="sales0gate@gmail.com" className="text-red-400 hover:text-red-300">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -430,16 +447,15 @@ const App = () => {
           <div>
             <h4 className="font-bold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300 text-sm">
-              <p>📞 +962 6 123 4567</p>
-              <p>📱 +962 79 123 4567</p>
-              <p>📧 info@securitygate.jo</p>
-              <p>📍 Al-Abdali District, Amman</p>
+              <p>📞 +962 77 995 4433</p>
+              <p>📧 sales0gate@gmail.com</p>
+              <p>📍 Khalda, Amman</p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Security Gate Electronics Company. All rights reserved.</p>
+          <p>&copy; 2025 Security Gate Electronics Company. All rights reserved.</p>
         </div>
       </div>
     </footer>
